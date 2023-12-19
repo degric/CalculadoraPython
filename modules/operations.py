@@ -20,3 +20,13 @@ def ecSG(a,b,c):
     x2 = ((-b)-(sqrt((b**2)-(4*a*c))))/(2*a)
     resultados = [x1,x2]
     return resultados
+
+# Sistemas de ecuaciones de primer  grado
+# Forrma: 
+# a1x + b1y = c1
+# a2x +b2y = c2
+
+def sisEcPG():
+
+
+    

@@ -100,11 +100,13 @@ class Window():
             
             print(resultados, len(resultados))
         
+    def sistEcSegGrado(self, wind):
 
     
 
 
-if __name__ == '__main__':
+        if __name__ == '__main__'::wq
+
     root = Tk()
     Calculadora = Window(root)
     root.mainloop()

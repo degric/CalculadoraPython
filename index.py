@@ -16,6 +16,7 @@ class Window():
         self.frame.grid(row=1, column=0)
         ttk.Button(self.frame, text='Calculadora de Ecuaciones\nForma: ax + b = c', command= lambda:  self.template(self.ecPrimerGWind)).grid(row=1, column=0, columnspan=2, sticky=W + E, pady=10, padx=10)
         ttk.Button(self.frame, text='Calculadora de Ecuaciones\nForma: ax + b = c', command= lambda:  self.template(self.ecSegundoGWind)).grid(row=1, column=2, columnspan=2, sticky=E+W, pady=10, padx=10)
+        ttk.Button(self.frame, text='Calculadora de sistema de Ecuaciones\n2X2', command=lambda: self.template(self.sistEcSegGrado)).grid(row=2, column=1, columnspan=2, sticky=E+W, pady=10, padx=10)
 
 
     def template(self, func):
@@ -101,11 +102,25 @@ class Window():
             print(resultados, len(resultados))
         
     def sistEcSegGrado(self, wind):
+        
 
+        window = wind 
+        window.title("Sistemas de ecuaciones de primer grado")
+
+        frame = ttk.Frame(window)
+        frame.grid(row=0,column=0)
+
+        #Label y Inputs
+
+        ttk.Label(frame, text='Calcula sistema de ecuaciones lineales').grid(row=1, column=1, columnspan=5, padx=10, pady=10, sticky=W+E)
+
+        
+    
     
 
 
-        if __name__ == '__main__'::wq
+if __name__ == '__main__':
+    
 
     root = Tk()
     Calculadora = Window(root)

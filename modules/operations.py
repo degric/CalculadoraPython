@@ -27,6 +27,8 @@ def ecSG(a,b,c):
 # a2x +b2y = c2
 
 def sisEcPG():
+    pass
+
 
 
     

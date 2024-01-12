@@ -2,8 +2,8 @@ from logging import exception
 import math
 from tkinter import *
 from tkinter import ttk
-
-from sqlalchemy import Index
+from matplotlib import pyplot as pl
+#from sqlalchemy import Index
 
 
 
@@ -48,6 +48,7 @@ class Window():
         c.grid(row=3, column=5)
 
         ttk.Button(frame, text='Calcular', command = lambda: calcular(a,b,c)).grid(row=4, column=2, columnspan=2, sticky=W+E, padx=10, pady=10)
+        ttk.Button(frame, text='Graficar', command = lambda: graficar(a,b,c)).grid(row=5, column=2, columnspan=2, sticky=W+E, padx=10, pady=10)
 
 
         resultado = Label(frame)
@@ -61,6 +62,14 @@ class Window():
             res = f'{resultados[0]}\n{resultados[1]}\n{resultados[2]}\n\nX = {resultados[3]}'
             
             resultado['text'] = res
+        def graficar(a, b, c):
+            a = float(int(a.get()))
+            b = float(int(b.get()))
+            c  = float(int(c.get()))
+            x = range(-20, 20)
+            pl.plot(x, [f1(i) for i in x])
+            
+
 
     def ecSegundoGWind(self, wind):
         from modules.operations import ecSG
@@ -98,11 +107,12 @@ class Window():
             if len(resultados) == '':
                 print('No se pudo XD')
                 return  
-
-
             
             print(resultados, len(resultados))
-        
+
+            resultado['text'] = resultados
+
+                
     def sistEcSegGrado2x2(self, wind):
         
 

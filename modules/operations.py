@@ -10,11 +10,13 @@ def ecPG(a, b, c):
     p3 = 'x = {}'.format(p2R)
     x = ((c-b)/a)
     resultados = [p1,p2,p3,x]
+    def f1(x, a, b):
+        return a*x + b 
     return resultados
     
 # Ecuaciones Formna 'ax^2 + bx +c  =0'
 
-def ecSG(a,b,c):
+def ecSG(a,b,c)::
     from math import sqrt
     x1 = ((-b)+(sqrt((b**2)-(4*a*c))))/(2*a)
     x2 = ((-b)-(sqrt((b**2)-(4*a*c))))/(2*a)
@@ -31,4 +33,8 @@ def sisEcPG():
 
 
 
-    
+class operations():
+    def __init__(self):
+        pass
+
+    def 
